@@ -8,7 +8,7 @@ Aplicação Web de um campeonato de luta entre 16 personagens de Super Smash Bro
 O projeto foi produzido seguindo a arquitetura de 3 camadas e o padrão MVC.
 
 ## 🎯 Objetivo
-Este projeto tem como objetivo testar os meus conhecimentos adquiridos durante o programa de estágio da T-Systems do Brasil.
+Este projeto tem como objetivo testar os meus conhecimentos adquiridos durante o programa de estágio da T-Systems do Brasil. 
 
 <br>
 
@@ -77,3 +77,5 @@ Eu não teria conseguido passar por todos os processos do projeto sem a ajuda de
 
 Muito obrigada por fazerem parte da minha jornada nesse projeto. Vocês, de alguma forma, me ensinaram algo novo e tornaram todo o processo menos estressante e solitário.❤️
 <br>
+## Observações
+Este projeto foi realizado em um diretório do Gitlab da empresa, por esse motivo, não foi possível repassar os commits, branches e tags de versionamento feitos durante o desenvolvimento de lá para o meu repositório pessoal.
