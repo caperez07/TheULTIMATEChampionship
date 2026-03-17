@@ -1,7 +1,7 @@
 # 🥊 The ULTIMATE Championship - Semana 11 e 12
 Aplicação Web de um campeonato de luta entre 16 personagens de Super Smash Bros Ultimate para descobrir quem será o próximo ULTIMATE CHAMPION! 🥇
 
-<img src="https://img.hotimg.com/Logo_championship.png">
+![Logo](docs/Logo_championship.png)
 
 <br>
 
@@ -15,7 +15,7 @@ Este projeto tem como objetivo testar os meus conhecimentos adquiridos durante o
 ## 🌐 Demo
 
 <p align="center">
-<img src="https://s9.gifyu.com/images/SF7Mw.gif" style="display: block; margin: 0 auto;">
+<img src="docs/SF7Mw.gif" style="display: block; margin: 0 auto;">
 </p>
 
 <br>
