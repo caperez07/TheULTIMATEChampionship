@@ -1,0 +1,326 @@
+﻿@{
+    ViewData["Title"] = "Campeonato";
+}
+@model Championship;
+
+<link rel="stylesheet" href="~/css/Championship.css" asp-append-version="true" />
+
+<div class="d-flex flex-column h-100 w-100 gap-5">
+    <div class="d-flex align-items-center justify-content-center w-100">
+        <p class="selected-characters" id="characters">Você selecionou 0 personagens</p>
+        <img class="title-championship" src="../Images/Campeonato.svg" />
+    </div>
+    <input id="charactersList" type="hidden" asp-for="CharactersID" />
+    <div class="characters-selection" style="background-image: url('../Images/Selecao Perso.svg')">
+        <table>
+            <tr>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="1" style="background-image: url('../Images/Characters/Kirby.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="2" style="background-image: url('../Images/Characters/Mario.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="3" style="background-image: url('../Images/Characters/Peach.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="4" style="background-image: url('../Images/Characters/Bowser.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="5" style="background-image: url('../Images/Characters/Luigi.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="6" style="background-image: url('../Images/Characters/DonkeyKong.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+                <td>
+                    <img class="championship-logo" style="background-image: url('../Images/Characters/Logo championship.png')"></img>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="8" style="background-image: url('../Images/Characters/Zelda.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="9" style="background-image: url('../Images/Characters/Yoshi.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="10" style="background-image: url('../Images/Characters/Samus.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="11" style="background-image: url('../Images/Characters/MetaKnight.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="12" style="background-image: url('../Images/Characters/KingDedede.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="13" style="background-image: url('../Images/Characters/Falco.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="14" style="background-image: url('../Images/Characters/PokemonTrainer.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="15" style="background-image: url('../Images/Characters/Pikachu.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="16" style="background-image: url('../Images/Characters/Ness.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="17" style="background-image: url('../Images/Characters/Sonic.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="18" style="background-image: url('../Images/Characters/Olimar.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="19" style="background-image: url('../Images/Characters/Lucas.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="20" style="background-image: url('../Images/Characters/WiiFitTrainer.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="characters-button" data-clicked="false" data-characterid="7" style="background-image: url('../Images/Characters/Link.png')">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="d-flex flex-column w-100 mb-5">
+        <button id="btnChampionship" class="btn" type="button" onclick="Championship()" disabled>
+            CAMPEÕES INSUFICIENTES
+        </button>
+    </div>
+    @Html.Hidden("urlChampionship", Url.Action("InitiateChampionship", "Home"))
+</div>
+
+<div class="spinner-wrapper d-none">
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+
+<div class="container d-none">
+    <video id="">
+        <source src="../Videos/.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerKirby d-none">
+    <video id="Kirby">
+        <source src="../Videos/Kirby.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerMario d-none">
+    <video id="Mario">
+        <source src="../Videos/Mario.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerPeach d-none">
+    <video id="Peach">
+        <source src="../Videos/Peach.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerBowser d-none">
+    <video id="Bowser">
+        <source src="../Videos/Bowser.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerLuigi d-none">
+    <video id="Luigi">
+        <source src="../Videos/Luigi.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerDokeyKong d-none">
+    <video id="DonkeyKong">
+        <source src="../Videos/DonkeyKong.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerLink d-none">
+    <video id="Link">
+        <source src="../Videos/Link.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerZelda d-none">
+    <video id="Zelda">
+        <source src="../Videos/Zelda.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerYoshi d-none">
+    <video id="Yoshi">
+        <source src="../Videos/Yoshi.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerPikachu d-none">
+    <video id="Pikachu">
+        <source src="../Videos/Pikachu.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerSamus d-none">
+    <video id="Samus">
+        <source src="../Videos/Samus.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerMetaKnight d-none">
+    <video id="MetaKnight">
+        <source src="../Videos/MetaKnight.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerKingDedede d-none">
+    <video id="KingDedede">
+        <source src="../Videos/KingDedede.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerFalco d-none">
+    <video id="Falco">
+        <source src="../Videos/Falco.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerPokemonTrainer d-none">
+    <video id="PokemonTrainer">
+        <source src="../Videos/PokemonTrainer.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerNess d-none">
+    <video id="Ness">
+        <source src="../Videos/Ness.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerSonic d-none">
+    <video id="Sonic">
+        <source src="../Videos/Sonic.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerOlimar d-none">
+    <video id="Olimar">
+        <source src="../Videos/Olimar.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+<div class="containerLucas d-none">
+    <video id="Lucas">
+        <source src="../Videos/Lucas.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+
+
+<script src="~/js/Championship.js"></script>

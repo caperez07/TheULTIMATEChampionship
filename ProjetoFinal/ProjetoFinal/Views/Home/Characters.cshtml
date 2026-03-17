@@ -1,0 +1,127 @@
+﻿@{
+    ViewData["Title"] = "Personagens";
+}
+@model List<Characters>;
+
+<link rel="stylesheet" href="~/css/Characters.css" asp-append-version="true" />
+
+<div class="d-flex flex-column h-100 w-100">
+    <div class="d-flex align-items-center justify-content-center w-100">
+        <img class="title-characters" src="../Images/Personagens.svg" />
+    </div>
+    <div class="container-card">
+        @if (Model != null && Model.Any())
+        {
+            foreach (Characters character in Model)
+            {
+                <div class="card-characters" style="background-image: url('../Images/Card/@(character.Name.Replace(" ", "")).png')">
+                    <p class="character-name">@character.Name</p>
+                    <p class="character-age">@character.Age</p>
+                    <p class="character-power">Poder: @character.Power</p>
+
+                    <div class="character-fight-status">
+                        <p class="character-fights">@character.Fights</p>
+                        <p class="character-victories">@character.Victory</p>
+                        <p class="character-defeats">@character.Defeat</p>
+                    </div>
+
+                    <div class="fights-label">
+                        <p>Lutas</p>
+                        <p>Vitórias</p>
+                        <p>Derrotas</p>
+                    </div>
+
+                    <div class="age-label">
+                        <p>Idade</p>
+                    </div>
+
+                    <div class="character-bio">
+                        @switch (character.Name)
+                        {
+                            case "Kirby":
+                                <p>Uma pequena criatura rosa que reside e protege o Planeta Popstar.</p>
+                                break;
+                            case "Mario":
+                                <p>Um encanador italiando, baixinho, bigodudo vindo do Brooklyn. Atualmente ele reside no Reino Cogumelo.</p>
+                                break;
+                            case "Peach":
+                                <p>
+                                    A amada princesa do Reino do Cogumelo. Ela é extremamente gentil e está sempre trabalhando para criar um mundo onde todos possam viver juntos e felizes.
+                                </p>
+                                break;
+                            case "Bowser":
+                                <p>O Rei dos Koopas, tartarugas antropomórficas que habitam o mundo do Reino dos Cogumelos.</p>
+                                break;
+                            case "Luigi":
+                                <p>
+                                    Irmão de Mario e segundo herói do Reino do Cogumelo. Ele é gentil, mas pode ficar um pouco nervoso, especialmente perto de fantasmas.
+                                </p>
+                                break;
+                            case "Donkey Kong":
+                                <p>Um Kong poderoso e despreocupado que mora na Ilha Donkey Kong. Gosta de comer bananas e passar tempo com seus amigos.</p>
+                                break;
+                            case "Link":
+                                <p>
+                                    O "Herói de Hyrule". Sempre que algo ameaça o Reino, Link é a contraparte que está destinada a lutar contra esse mal e restaurar a paz ao povo de Hyrule.
+                                </p>
+                                break;
+                            case "Zelda":
+                                <p>A princesa de Hyrule e guardiã da Triforce da Sabedoria.</p>
+                                break;
+                            case "Yoshi":
+                                <p>Um pequeno dinossauro verde. Normalmente ele serve como o corcel de confiança de Mario.</p>
+                                break;
+                            case "Samus":
+                                <p>
+                                    Uma caçadora de recompensas intergaláctica. Ela perdeu seus pais durante um ataque dos Piratas Espaciais em sua casa, K-2L.
+                                </p>
+                                break;
+                            case "Meta Knight":
+                                <p>
+                                    Conhecido como rival do Kirby. Frequentemente lutará com ele por diversos motivos.
+                                </p>
+                                break;
+                            case "King Dedede":
+                                <p>Uma criatura corpulenta, azul, parecida com um pinguim, que empunha um martelo e se proclama rei da Terra dos Sonhos.</p>
+                                break;
+                            case "Falco":
+                                <p>Um piloto famoso que protegerá você se as coisas ficam difíceis.</p>
+                                break;
+                            case "Pokemon Trainer":
+                                <p>Uma pessoa que captura, treina, cuida e luta com Pokémon. A maioria das pessoas no mundo Pokémon são conhecidos como Treinadores.</p>
+                                break;
+                            case "Pikachu":
+                                <p>Membro de uma pequena espécie de Pokémon, semelhante a um rato amarelo, que é capaz de controlar eletricidade.</p>
+                                break;
+                            case "Ness":
+                                <p>Um menino dotado de poderes psíquicos especiais que geralmente é comparado ao herói de EarthBound Beginnings, Ninten.</p>
+                                break;
+                            case "Sonic":
+                                <p>
+                                    Um ouriço azul que nasceu com a habilidade de correr mais rápido que a velocidade do som, daí seu nome, e possui reflexos extremamente rápidos.
+                                </p>
+                                break;
+                            case "Olimar":
+                                <p>
+                                    Um piloto de nave espacial da Hocotate Freight. Olimar fica muito mais forte quando tem Pikmin com ele.
+                                </p>
+                                break;
+                            case "Lucas":
+                                <p>
+                                    Um menino gentil, mimado que parece um pouco nervoso. Apesar disso, ele não foge de se divertir e brincar com a família.
+                                </p>
+                                break;
+                            case "Wii Fit Trainer":
+                                <p>Uma coach de Yoga. Ela pratica Yoga há vários anos.</p>
+                                break;
+                        }
+                    </div>
+
+                </div>
+            }
+        }
+    </div>
+
+    <a asp-controller="Home" asp-action="Championship" class="btn-hex mb-5">Ir para o campeonato</a>
+
+</div>
